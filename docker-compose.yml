@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  realestate-db:
+    image: postgres:15
+    container_name: realestate-db
+    environment:
+      POSTGRES_DB: realestate_db
+      POSTGRES_USER: realestate
+      POSTGRES_PASSWORD: 687936
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - realestate-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U realestate"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  realestate-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: realestate-backend
+    depends_on:
+      realestate-db:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://realestate-db:5432/realestate_db
+      SPRING_DATASOURCE_USERNAME: realestate
+      SPRING_DATASOURCE_PASSWORD: 687936
+      JWT_SECRET: MySuperSecretKeyThatIsAtLeast32CharsLong!!
+      JWT_EXPIRATION_MS: 86400000
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+    networks:
+      - realestate-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  realestate-net:
+    driver: bridge
+
+volumes:
+  db-data:

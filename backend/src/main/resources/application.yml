@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/realestate_db}
+    username: ${SPRING_DATASOURCE_USERNAME:realestate}
+    password: ${SPRING_DATASOURCE_PASSWORD:687936}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+jwt:
+  secret: ${JWT_SECRET:MySuperSecretKeyThatIsAtLeast32CharsLong!!}
+  expirationMs: ${JWT_EXPIRATION_MS:86400000}
+
+logging:
+  level:
+    com.realestatecrm: DEBUG
+    org.springframework.web.cors: DEBUG
+    org.springframework.security: DEBUG
