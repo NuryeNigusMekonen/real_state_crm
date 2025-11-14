@@ -106,7 +106,7 @@ For detailed development instructions, team responsibilities, and workflow guide
 
 ### Key Development Notes:
 - Each team member works on their dedicated feature branch
-- Follow the merge order specified in DEVELOPMENT.md
+- Follow the merge order specified in Development.md
 - Code reviews are required before merging
 - Maintain clean commit history and descriptive messages
 
