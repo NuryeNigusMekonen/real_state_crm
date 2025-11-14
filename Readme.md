@@ -20,7 +20,7 @@ This is a team project developed by 5 developers, each responsible for specific 
 - Java 17
 - Spring Boot 3.x
 - Spring Security with JWT
-- MySQL Database
+- Postgres Database
 - Maven
 
 ### Frontend
