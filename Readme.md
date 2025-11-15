@@ -4,7 +4,7 @@ A full-stack Customer Relationship Management system for real estate agencies bu
 
 ## Project Overview
 
-This is a team project developed by 5 developers, each responsible for specific components of the system. The application provides comprehensive property management, lead tracking, and analytics capabilities for real estate professionals.
+This is a team project developed by 6 developers, each responsible for specific components of the system. The application provides comprehensive property management, lead tracking, and analytics capabilities for real estate professionals.
 
 ## Team Members
 
@@ -12,7 +12,7 @@ This is a team project developed by 5 developers, each responsible for specific 
 - **Rediet** - Property Management APIs  
 - **Nardos** - Frontend Foundation & UI
 - **Nebiyat** - Property Management UI
-- **Nurye and Meaza** - Leads & Analytics
+- **meaza and Nurye** - Leads & Analytics
 
 ## Technology Stack
 
