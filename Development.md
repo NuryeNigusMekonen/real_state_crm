@@ -10,7 +10,7 @@ Perfect! Here's the clean, professional DEVELOPMENT.md exactly in the format you
 | Rediet | Property Management APIs | feature/backend-properties | Property Entities, Services, REST APIs |
 | Nardos | Frontend Foundation & UI | feature/frontend-core | Layout, Routing, Authentication, Core Components |
 | Nebiyat | Property Management UI | feature/frontend-properties | Property Forms, Tables, Management Interface |
-| Nurye | Leads & Analytics | feature/leads-analytics | Leads System, Analytics |
+| meaza and Nurye | Leads & Analytics | feature/leads-analytics | Leads System, Analytics |
 
 ## Getting Started
 
@@ -115,7 +115,7 @@ frontend/src/pages/PropertyExplorer.tsx
 frontend/src/types/Property.ts
 ```
 
-### Nurye - Leads & Analytics
+### meaza and Nurye - Leads & Analytics
 **Branch:** feature/leads-analytics
 
 **First Week Tasks:**
@@ -185,7 +185,7 @@ Merge PRs in this exact sequence:
 2. Rediet - feature/backend-properties (Property APIs)
 3. Nardos - feature/frontend-core (Frontend foundation)
 4. Nebiyat - feature/frontend-properties (Property UI)
-5. Nurye - feature/leads-analytics (Leads system)
+5. meaza and Nurye - feature/leads-analytics (Leads system)
 
 Wait for the previous PR to be merged before creating yours!
 
@@ -197,7 +197,7 @@ Wait for the previous PR to be merged before creating yours!
 | Rediet | Gedion, Nurye |
 | Nardos | Nebiyat, Nurye |
 | Nebiyat | Nardos, Nurye |
-| Nurye | Gedion, Nardos |
+| meaza and Nurye | Gedion, Nardos |
 
 ## Resolving Merge Conflicts
 

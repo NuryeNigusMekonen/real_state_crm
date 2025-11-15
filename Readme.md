@@ -12,7 +12,7 @@ This is a team project developed by 5 developers, each responsible for specific 
 - **Rediet** - Property Management APIs  
 - **Nardos** - Frontend Foundation & UI
 - **Nebiyat** - Property Management UI
-- **Nurye** - Leads & Analytics
+- **Nurye and Meaza** - Leads & Analytics
 
 ## Technology Stack
 
